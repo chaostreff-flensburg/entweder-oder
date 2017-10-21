@@ -1,0 +1,29 @@
+.form__decision {
+  width: 70%;
+  margin: 60px auto 0;
+
+  @media (min-width: $width-mobile) {
+    width: 50%;
+    margin-top: 80px;
+  }
+}
+
+.form__or {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form__input {
+  border: none;
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 1rem;
+
+  @media (min-width: $width-mobile) {
+    width: 50%;
+  }
+}

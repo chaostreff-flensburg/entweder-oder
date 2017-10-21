@@ -1,0 +1,16 @@
+.body {
+  background-color: $color-background;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+}
+
+.body__h2 {
+  display: block;
+  text-align: center;
+  margin-top: 40%;
+}
+
+.body__content {
+  width: 80%;
+  margin: 40px auto;
+}

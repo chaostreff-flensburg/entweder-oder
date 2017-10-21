@@ -1,0 +1,139 @@
+//  ==========================================================================
+//  @section: Remove focus;
+//  @source: http://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links;
+//  ==========================================================================
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+//  ==========================================================================
+//  @section: Box model reset;
+//  @source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/;
+//  ==========================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  //  ==========================================================================
+  //  @section: Remove gray highlight when tapping links in Mobile Safari;
+  //  @source: https://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
+  //  ==========================================================================
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* stylelint-disable property-no-unknown */
+  //  ==========================================================================
+  //  @section: Prevent mobile safari from resizing text
+  //  @source: http://blog.55minutes.com/2012/04/iphone-text-resizing/
+  //  ==========================================================================
+  text‑size‑adjust: 100%;
+  /* stylelint-enable */
+
+  //  ==========================================================================
+  //  @section: Remove default styles from input on iOS
+  //  @source: https://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+  //  ==========================================================================
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//  ==========================================================================
+//  @section: Remove default styles from input on iOS
+//  @source: http://stackoverflow.com/questions/7599533/ios-forces-rounded-corners-and-glare-on-inputs
+//  ==========================================================================
+
+input,
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+// ==========================================================================
+//  @creator: Fix main element in IE
+//  @contact: https://github.com/aFarkas/html5shiv/issues/114#issuecomment-24992081
+//  ==========================================================================
+
+main {
+  display: block;
+}
+
+// ==========================================================================
+//  @creator: Print styles
+//  @contact: https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+//  ==========================================================================
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent !important;
+    color: #000000 !important; // Black prints faster: http://www.sanbeiji.com/archives/953
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  // Don't show links that are fragment identifiers,
+  // or use the `javascript:` pseudo protocol
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  // Printing Tables:
+  // http://css-discuss.incutio.com/wiki/Printing_Tables
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

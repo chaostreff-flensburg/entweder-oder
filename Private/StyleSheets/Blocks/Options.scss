@@ -1,0 +1,29 @@
+.options {
+  width: 100%;
+  background-color: $color-primary;
+  position: fixed;
+  bottom: 0;
+  color: $color-bright;
+}
+
+.option__items {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $width-mobile) {
+    width: 50%;
+  }
+}
+
+.option__item {
+  list-style-type: none;
+  float: left;
+}
+
+.option__link {
+  text-decoration: none;
+  color: $color-bright;
+  font-weight: bold;
+}
