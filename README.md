@@ -3,4 +3,4 @@
 
 ## Development
 Clone the repo and install the dependencies with `npm i`.
-You can then start the gulp-watcher with `gulp watch`.
+You can then start the gulp-watcher with `npm run watch`.
