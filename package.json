@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "azffle_azffle_banner-shz-newsapp_290317",
   "main": "gulpfile.js",
+  "script": {
+    "watch": "gulp watch"
+  }
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "child_process": "^1.0.2",
